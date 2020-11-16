@@ -10,9 +10,13 @@
 {% block content %}
 <div class="description-container">
     <span class="description">The following is a chart of every computer language known to man. The chart includes the year the language went public and the developers involved with its creation. </span>
+    <br/>
+    <br/>
+    <hr />
+    <br/>
 </div>
 <div class="table-container">
-    <table>
+    <table class="table">
     {% for row in languages %}
         <tr class="table-row">
             {% for data in row %}
