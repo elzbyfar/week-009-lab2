@@ -1,14 +1,25 @@
 {% extends "base.html" %}
 
-{% block title %}Luis Alejo Lab Tingz{% endblock %}
+{% block title %}Computer Languages{% endblock %}
 
 {% block header %}
-<h1>Lab Tingz</h1>
+<h1>A History of Computer Languages</h1>
 
 {% endblock %}
 
 {% block content %}
-<div>
-<p>Hello, stranger. Welcome to Lab Tingz. Make yourself at "HOME".<p>
+<div class="description-container">
+    <span class="description">The following is a chart of every computer language known to man. The chart includes the year the language went public and the developers involved with its creation. </span>
+</div>
+<div class="table-container">
+    <table class="table">
+    {% for row in languages %}
+        <tr class="table-row">
+            {% for data in row %}
+            <td class="table-data">{{data}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
 </div>
 {% endblock %}
